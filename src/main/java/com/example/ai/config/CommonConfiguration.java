@@ -11,6 +11,7 @@ public class CommonConfiguration {
     public ChatClient chatClient(OllamaChatModel model) {
         return ChatClient
                 .builder(model)
+                .defaultSystem("You are a helpful assistant. Your name is Talon. Answer as long as possible.")
                 .build();
     }
 }
