@@ -6,3 +6,7 @@ spring:
       base-url: http://localhost:11434
       chat:
         model: llama3.2:3b
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: DEBUG
+    com.example.ai: DEBUG
