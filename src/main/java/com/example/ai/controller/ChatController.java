@@ -14,10 +14,10 @@ public class ChatController {
     private final ChatClient chatClient;
 
     @RequestMapping(value = "/chat",produces="text/html; charset=UTF-8")
-    public Flux<String> chat(String prompt) {
+    public Flux<String> chat(String prompt, String chatId) {
         return chatClient.prompt()
                 .user(prompt)
-                .stream()
+                .advisors(a -> a.param("conversationId", chatId)).stream()
                 .content();
     }
 }
