@@ -6,6 +6,12 @@ spring:
       base-url: http://localhost:11434
       chat:
         model: llama3.2:3b
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: qwen-max-latest
 logging:
   level:
     org.springframework.ai.chat.client.advisor: DEBUG
