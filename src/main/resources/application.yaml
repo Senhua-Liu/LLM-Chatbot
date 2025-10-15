@@ -12,6 +12,10 @@ spring:
       chat:
         options:
           model: qwen-max-latest
+      embedding:
+        options:
+          model: text-embedding-v3
+          dimensions: 1024
 logging:
   level:
     org.springframework.ai.chat.client.advisor: DEBUG
